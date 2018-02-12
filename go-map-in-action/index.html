@@ -1,226 +1,117 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
-<head>
+<html>
+  <head>
+    <title></title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.36" />
+<title>Go map in action :: </title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
 
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "http:\/\/shyr.github.io\/";
+</script>
+<meta name="description" content="Knowing is not enough; we must apply. Willing is not enough; we must do.">
+<meta name="author" content="Stephen Moon">
 
     
+  </head>
+  <body data-url="/go-map-in-action/">
     
-        <meta name="twitter:card" content="summary"/>
+      <header>
+  <div class="logo">
     
-
-
-
-<meta name="twitter:title" content="Go map in action"/>
-<meta name="twitter:description" content=""/>
-<meta name="twitter:site" content="@vjeantet"/>
-
-
-
-  	<meta property="og:title" content="Go map in action &middot; " />
-  	<meta property="og:site_name" content="" />
-  	<meta property="og:url" content="http://shyr.github.io/go-map-in-action/" />
-
-    
-        
-            <meta property="og:image" content="/images/cover_polenord.jpg"/>
-        
-    
-
-    
-    <meta property="og:description" content="" />
-  	<meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2014-07-11T10:54:24&#43;02:00" />
-
-    
-    
-
-    <title>Go map in action &middot; </title>
-
-    
-    <meta name="description" content="Go maps in action 6 February 2013
-Introduction One of the most useful data structures in computer science is the hash table. Many hash table implementations exi" />
-    
-
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="shortcut icon" href="/images/favicon.ico">
-	  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
-
-    <link rel="stylesheet" type="text/css" href="/css/screen.css" />
-    <link rel="stylesheet" type="text/css" href="/css/nav.css" />
-
-    
-
-    
-
-    
-      
-          <link href="/index.xml" rel="alternate" type="application/rss+xml" title="" />
-      
-      
-    
-    <meta name="generator" content="Hugo 0.36" />
-
-    <link rel="canonical" href="http://shyr.github.io/go-map-in-action/" />
-
-    
-      
-    
-    <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "publisher": {
-        "@type": "Organization",
-        "name": ,
-        "logo": http://shyr.github.io/images/logo.png
-    },
-    "author": {
-        "@type": "Person",
-        "name": ,
-        
-        "image": {
-            "@type": "ImageObject",
-            "url": http://shyr.github.io/images/logo.png,
-            "width": 250,
-            "height": 250
-        }, 
-        
-        "url": ,
-        "sameAs": [
-            
-            
-             
-             
-             
-             
-             
-            
-        ],
-        "description": IT software and Security Engineer, Open source enthusiast.
-        
-    },
-    "headline": Go map in action,
-    "name": Go map in action,
-    "wordCount": 1367,
-    "timeRequired": "PT7M",
-    "inLanguage": {
-      "@type": "Language",
-      "alternateName": en
-    },
-    "url": http://shyr.github.io/go-map-in-action/,
-    "datePublished": 2014-07-11T10:54Z,
-    "dateModified": 2014-07-11T10:54Z,
-    
-    
-    "description": ,
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": http://shyr.github.io/go-map-in-action/
-    }
-}
-    </script>
-    
-
-
-    
-
-    
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-91453496-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
-    
-
-    
-</head>
-<body class="nav-closed">
-
-  <div class="nav">
-    <h3 class="nav-title">Menu</h3>
-    <a href="#" class="nav-close">
-        <span class="hidden">Close</span>
-    </a>
-    <ul>
-        
-        
-        
-            
-            <li class="nav-opened" role="presentation">
-            	<a href="https://facebook.com/shyr">Facebook</a>
-            </li>
-        
-            <h3>Follow me</h3>
-            <li class="nav-opened" role="presentation">
-            	<a href="https://github.com/shyr">Github repos</a>
-            </li>
-        
-            
-            <li class="nav-opened" role="presentation">
-            	<a href="/">Blog</a>
-            </li>
-        
-        
-    </ul>
-
-    
-    <a class="subscribe-button icon-feed" href="/index.xml">Subscribe</a>
-    
-</div>
-<span class="nav-cover"></span>
-
-
- <div class="site-wrapper">
-
-
-
-<header class="main-header post-head no-cover">
-  <nav class="main-nav clearfix">
-
-
+	
   
-      <a class="blog-logo" href="http://shyr.github.io/"><img src="/images/logo.png" alt="Home" /></a>
+    <a class="baselink" href="http://shyr.github.io/"></a>
   
-  
-      <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
-  
-  </nav>
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
 </header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/post/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/post/">Post</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/" class="dd-item">
+        <div>
+          <a href="/">
+            
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/go-map-in-action/" class="dd-item active">
+        <div>
+          <a href="/go-map-in-action/">
+            Go map in action
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
 
 
 
-<main class="content" role="main">
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/post/" >
+   Post</option> 
+      <option value="/" >- </option>
+      <option value="/go-map-in-action/"  selected>- Go map in action</option>
+  
 
 
 
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/js/auto-complete.js"></script>
+        <link href="/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "http:\/\/shyr.github.io\/";
+          
+        </script>
+        <script type="text/javascript" src="/js/search.js"></script>
+      </div>
+    
 
-  <article class="post post">
-
-    <header class="post-header">
-        <h1 class="post-title">Go map in action</h1>
-        <small></small>
-
-        <section class="post-meta">
-        
-          <time class="post-date" datetime="2014-07-11T10:54:24&#43;02:00">
-            Jul 11, 2014
-          </time>
-        
-         
-        </section>
-    </header>
-
-    <section class="post-content">
-      <p>Go maps in action
+    <h1>Go map in action</h1>
+    
+    
+    
+    <p>Go maps in action
 6 February 2013</p>
 
 <p>Introduction
@@ -405,121 +296,64 @@ for _, k := range keys {
 }
 By Andrew Gerrand</p>
 
-    </section>
-
-
-  <footer class="post-footer">
-
 
     
-
-
-
-
-
-
-
-
-<figure class="author-image">
-    <a class="img" href="http://shyr.github.io/" style="background-image: url(/images/logo.png)"><span class="hidden">stephen's Picture</span></a>
-</figure>
-
-
-<section class="author">
-  <h4><a href="http://shyr.github.io/">stephen</a></h4>
-  
-  <p>IT software and Security Engineer, Open source enthusiast.</p>
-  
-  <div class="author-meta">
-    <span class="author-location icon-location">Korea</span>
     
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/" title=""> <i class="fa fa-chevron-left"></i><label></label></a>
+    <a class="nav nav-next" href="/post/" title="Post" style="margin-right: 0px;"><label>Post</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
-</section>
 
-
-
-
-    
-<section class="share">
-  <h4>Share this post</h4>
-  <a class="icon-twitter" style="font-size: 1.4em" href="https://twitter.com/share?text=Go%20map%20in%20action&nbsp;-&nbsp;&amp;url=http%3a%2f%2fshyr.github.io%2fgo-map-in-action%2f"
-      onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-      <span class="hidden">Twitter</span>
-  </a>
-  <a class="icon-facebook" style="font-size: 1.4em" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fshyr.github.io%2fgo-map-in-action%2f"
-      onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-      <span class="hidden">Facebook</span>
-  </a>
-  <a class="icon-pinterest" style="font-size: 1.4em" href="http://pinterest.com/pin/create/button/?url=http%3a%2f%2fshyr.github.io%2fgo-map-in-action%2f&amp;description=Go%20map%20in%20action"
-      onclick="window.open(this.href, 'pinterest-share','width=580,height=296');return false;">
-      <span class="hidden">Pinterest</span>
-  </a>
-  <a class="icon-google-plus" style="font-size: 1.4em" href="https://plus.google.com/share?url=http%3a%2f%2fshyr.github.io%2fgo-map-in-action%2f"
-     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-      <span class="hidden">Google+</span>
-  </a>
-</section>
-
-
-
-    
-
-<div id="disqus_thread"></div>
-<script>
-
-
-
-
-var disqus_config = function () {
-this.page.url = "http:\/\/shyr.github.io\/go-map-in-action\/";  
-this.page.identifier = "http:\/\/shyr.github.io\/go-map-in-action\/"; 
-};
-
-(function() { 
-var d = document, s = d.createElement('script');
-s.src = 'https://shyr.github.io.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-
-
-
-
-
-
-  </footer>
+  </section>
 </article>
 
-</main>
+<footer>
 
-
-  <aside class="read-next">
-  
-      <a class="read-next-story" style="no-cover" href="/">
-          <section class="post">
-              <h2></h2>
-              
-          </section>
-      </a>
-  
-  
-</aside>
-
-
-
-    <footer class="site-footer clearfix">
-        <section class="copyright"><a href=""></a> All rights reserved</section>
-        
-    </footer>
-    </div>
-    <script type="text/javascript" src="/js/jquery.js"></script>
-    <script type="text/javascript" src="/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="/js/index.js"></script>
+<div class="footline">
     
-</body>
-</html>
 
+    
+
+  
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 11/07/2014
+    </div>
+    
+
+    <div class="github-link">
+      <a href="post/golang/go-map-in-action.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    Create a content/_footer.md file to customize the footer content
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>
