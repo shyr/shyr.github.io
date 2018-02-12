@@ -5,7 +5,11 @@ languagecode = "ko-KR"
 paginate = 5
 pluralizelisttitles = false
 theme = "hugo-theme-docdock"
-title = ""
+title = "stephen's blog"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
 [[menu.main]]
 identifier = "blog"
 name = "Blog"

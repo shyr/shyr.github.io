@@ -2,6 +2,8 @@
 date = "2014-07-11T10:54:24+02:00"
 title = "Go map in action"
 author = "stephen"
+# Type of content, set "slide" to display it fullscreen with reveal.js
+type="page"
 +++
 
 Go maps in action
