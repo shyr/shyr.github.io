@@ -4,7 +4,7 @@ disqusshortname = "shyr.github.io"
 languagecode = "ko-KR"
 paginate = 5
 pluralizelisttitles = false
-theme = "hugo-theme-casper"
+theme = "hugo-theme-docdock"
 title = ""
 [[menu.main]]
 identifier = "blog"
