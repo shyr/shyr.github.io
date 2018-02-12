@@ -6,7 +6,6 @@ authoravatar = "https://cdn4.iconfinder.com/data/icons/gray-user-management/512/
 authorbio = "IT software and Security Engineer, Open source enthusiast."
 authorlocation = "Paris, France"
 authorwebsite = "http://vjeantet.fr"
-...
 +++
 
 Contents here
