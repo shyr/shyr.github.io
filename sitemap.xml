@@ -8,19 +8,18 @@
   </url>
   
   <url>
-    <loc>http://shyr.github.io/go-map-in-action/</loc>
+    <loc>http://shyr.github.io/golang/go-map-in-action/</loc>
     <lastmod>2014-07-11T10:54:24+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://shyr.github.io/</loc>
-    <lastmod>2014-07-11T10:54:24+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://shyr.github.io/categories/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://shyr.github.io/</loc>
+    <lastmod>2014-07-11T10:54:24+02:00</lastmod>
   </url>
   
   <url>
@@ -32,6 +31,11 @@
   <url>
     <loc>http://shyr.github.io/tags/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://shyr.github.io/golang/</loc>
+    <lastmod>2014-07-11T10:54:24+02:00</lastmod>
   </url>
   
 </urlset>
